@@ -177,9 +177,13 @@ def cam():
     else:
         return render_template('cam.html')
 
+
+m= False
 @auth.route('/attendance')
 def att():
-    return render_template('attendance.html')
+    global m
+    print(m)
+    return render_template('attendance.html',enable = m)
 
 def gen():
     cap = cv2.VideoCapture(0)
