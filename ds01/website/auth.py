@@ -1,3 +1,4 @@
+from email import message
 from flask import Blueprint, render_template, request, redirect, session, url_for
 import pymongo, bcrypt
 
@@ -7,9 +8,10 @@ client = pymongo.MongoClient("mongodb+srv://srm:2024@cluster0.ec8b1tz.mongodb.ne
 db = client.get_database('total_records')
 records = db.register
 
-
+message = ''
 @auth.route('/signup/', methods = ['GET', 'POST'])
 def sign_up():
+    global message
     if "user" in session:
         return redirect(url_for('/dashboard'))
 
