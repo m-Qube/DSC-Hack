@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{url_for('static', filename='styleattend.css')}}">
+    <meta http-equiv="refresh" content="3" >
 </head>
 <body>
     <div class="header">
@@ -27,8 +28,12 @@
             </div>
             <div class="row">
                 <div class="col-1">
-                    <img class ="mainimg" src="{{url_for('static', filename='image.png')}}" alt="">
+                    <img class ="mainimg" src="{{ url_for('auth.video_feed') }}" alt="">
                 </div>
+                <form action="/">
+                    <input type="submit" name="upload" class="btn btn-primary" 
+                         value="Proceed" {% if not enable %}disabled{%endif%} />
+                        </form>
                 <div class="col-2">
                     <img src="logo.png" class="attend-logo">
                     <div class="roow">
