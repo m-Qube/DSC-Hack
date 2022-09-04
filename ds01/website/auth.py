@@ -3,7 +3,7 @@ import pymongo, bcrypt
 
 auth = Blueprint('auth', __name__)
 
-client = pymongo.MongoClient("mongodb://localhost:27017")
+client = pymongo.MongoClient("mongodb+srv://srm:2024@cluster0.ec8b1tz.mongodb.net/test")
 db = client.get_database('total_records')
 records = db.register
 
