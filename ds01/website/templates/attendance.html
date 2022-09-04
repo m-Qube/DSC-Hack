@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='styleattend.css')}}">
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><img src= "{{url_for('static', filename='live.png')}}" class="active"></li>
+                <li><img src= "{{url_for('static', filename='video.png')}}" ></li>
+                <li><img src= "{{url_for('static', filename='message.png')}}" ></li>
+                <li><img src= "{{url_for('static', filename='notification.png')}}" notification.png" ></li>
+                <li><img src= "{{url_for('static', filename='users.png')}}" ></li>
+                <li><img src= "{{url_for('static', filename='setting.png')}}" ></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="top-icons">
+                <img src="{{url_for('static', filename='search.png')}}">
+                <img src="{{url_for('static', filename='menu.png')}}">
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <img class ="mainimg" src="{{url_for('static', filename='image.png')}}" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="logo.png" class="attend-logo">
+                    <div class="roow">
+                    <div class="namecol1">
+                        <h1>NAME</h1>
+                        <br>
+                        <h1>ROLL NO</h1>
+                        <br>
+                        <h1>Present/Absent</h1>
+                    </div>
+                    <div class="namecol2">
+                        <form action="/action_page.php">
+                            <input type="text" id="fname" name="fname"><br>              
+                            <input type="text" id="fname" name="fname"><br>     <br>                    
+                            <input type="text" id="fname" name="fname"><br>
+                          </form> 
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

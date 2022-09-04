@@ -94,3 +94,7 @@ def cam():
         return render_template('cam.html')
     else:
         return render_template('cam.html')
+
+@auth.route('/attendance')
+def att():
+    return render_template('attendance.html')
